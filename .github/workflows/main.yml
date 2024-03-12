@@ -1,12 +1,12 @@
-name: 'Branch Naming Convention'
-on:
-  create
+name: 'Assert Branch Naming Convention'
+on: create
 
 jobs:
-  branch-naming-rules-on-push:
+  branch-naming-rules:
     runs-on: ubuntu-latest
     steps:
-      - name: 'git hub ref'
-        run: |
-          env
-
+      - uses: deepakputhraya/action-branch-name@master
+        with:
+          regex: '(feature?|fix?|hotfix?|hf?|bug?)+\/(CMC-)\d+'
+          allowed_prefixes: 'feature,fix,hotfix,hf,bug'
+          ignore: master,main,2024.**
