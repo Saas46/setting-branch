@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Branching conventions
 
 on:
@@ -23,5 +21,5 @@ jobs:
           echo Add other actions to build,
           ls -a 
           echo
-          git --version
+          git branch name $github.event.ref
           echo what about build tools?
