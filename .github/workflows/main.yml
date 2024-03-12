@@ -18,8 +18,4 @@ jobs:
         
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          ls -a 
-          echo
-          git branch name $github.event.ref
-          echo what about build tools?
+          env
