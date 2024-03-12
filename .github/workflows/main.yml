@@ -8,6 +8,5 @@ jobs:
     steps:
       - name: 'git hub ref'
         run: |
-          echo github.event.ref_type
-          echo github.github.event.ref
+          echo env
 
